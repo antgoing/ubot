@@ -14,15 +14,15 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
-TARGET_REACTION_CHANNEL_IDS = [890378481077202958] # ZASTĄP SWOIMI ID KANAŁÓW!
+TARGET_REACTION_CHANNEL_IDS = [890378481077202958, 903309776539250710, 903310093364396072, 903306416822030346, 903310225522696274, 903309701217927179, 1312156580506239079, 1312457182893310024, 1349756891554775161, 983426109364396042, 908382362755268638, 1043292223451697153, 903386664410419201, 903310345072951308] # ZASTĄP SWOIMI ID KANAŁÓW!
 
 @client.event
 async def on_ready():
     print(f"✅ Zalogowano jako {client.user}")
-    '''CHANNEL_ID = 890378481077202958
+    CHANNEL_ID = 890378481077202958
     ch = client.get_channel(CHANNEL_ID)
     if ch:
-        await ch.send("bla") xd'''
+        await ch.send("bla")
 
 @client.event
 async def on_message(message):

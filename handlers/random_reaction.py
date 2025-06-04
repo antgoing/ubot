@@ -16,7 +16,7 @@ async def try_random_reaction(message: Message, target_channel_ids: List[int]) -
         return False
 
     # 10% chance to react
-    if random.random() < 1:
+    if random.random() < 0.02:
         guild_emojis = message.guild.emojis
         if guild_emojis:
             random_emoji = random.choice(guild_emojis)
