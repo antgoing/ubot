@@ -18,17 +18,14 @@ TARGET_REACTION_CHANNEL_IDS = [890378481077202958, 903309776539250710, 903310093
 
 @client.event
 async def on_ready():
-    print(f"✅ Zalogowano jako {client.user}")
+    print(f"Zalogowano jako {client.user}")
     CHANNEL_ID = 890378481077202958
     ch = client.get_channel(CHANNEL_ID)
     if ch:
-        await ch.send("bla")
+        await ch.send("ok")
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
-
     if await try_handle_u_channel(message):
         return
     
